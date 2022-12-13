@@ -8,7 +8,7 @@ class SpindlerBattery(Battery):
     self.curr_date = curr_date
 
   def needs_Service(self) -> bool:
-    serv_thresh = 365 * 2
+    serv_thresh = 365 * 3
     time_since_serv = self.curr_date - self.last_serv_date
     return time_since_serv.days > serv_thresh
 

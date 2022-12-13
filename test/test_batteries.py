@@ -9,8 +9,8 @@ class TestSpindlerBattery(unittest.TestCase):
   def setUp(self):
     # A Spindler battery must be serviced every 2 years.
     today = datetime.today().date()
-    more_than_two_years_ago = today - timedelta(days=365*2+1)  # 731 days ago
-    less_than_two_years_ago = today - timedelta(days=365*2-1)  # 729 days ago
+    more_than_two_years_ago = today - timedelta(days=365*3+1)  # 731 days ago
+    less_than_two_years_ago = today - timedelta(days=365*3-1)  # 729 days ago
     self.spindler_that_needs_service = SpindlerBattery(
         current_date=today,
         last_service_date=more_than_two_years_ago
